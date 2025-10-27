@@ -25,7 +25,7 @@ jobs:
     steps:
 
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         fetch-depth: 0
 
@@ -121,7 +121,7 @@ jobs:
     steps:
 
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Install uniget
       uses: uniget-org/uniget-action@v1
@@ -188,7 +188,7 @@ jobs:
     steps:
 
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Install uniget
       uses: uniget-org/uniget-action@v1
@@ -256,7 +256,7 @@ jobs:
         tool_with_version: ${{ fromJSON(needs.collect_versions.outputs.tools_with_version) }}
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Install uniget
       uses: uniget-org/uniget-action@v1
       with:
@@ -283,7 +283,7 @@ jobs:
         tool_with_version: ${{ fromJSON(needs.collect_versions.outputs.tools_with_version) }}
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Smoke test
       run: |
         TOOL_WITH_VERSION="${{ matrix.tool_with_version }}"
