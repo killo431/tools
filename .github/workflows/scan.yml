@@ -57,7 +57,7 @@ jobs:
 
     - name: Analyze for critical and high CVEs
       id: docker-scout-cves
-      uses: docker/scout-action@v0.23.4
+      uses: docker/scout-action@v1.20.2
       with:
         command: cves
         image: ghcr.io/${{ github.repository }}/${{ steps.fix.outputs.name_and_version }}
